@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin =
 	require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const htmlPageNames = ['template', 'grid2'];
+const htmlPageNames = ['testimonial', 'grid2'];
 const multipleHtmlPlugins = htmlPageNames.map(name => {
 	return new HtmlWebpackPlugin({
 		template: `src/${name}.html`,
@@ -18,7 +18,7 @@ module.exports = {
 	entry: {
 		bundle: path.resolve(__dirname, 'src/index.js'),
 		grid2: path.resolve(__dirname, 'src/grid2.js'),
-		template: path.resolve(__dirname, 'src/template.js')
+		testimonial: path.resolve(__dirname, 'src/testimonial.js')
 	},
 	devtool: 'source-map',
 	output: {
